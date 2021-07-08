@@ -1,0 +1,65 @@
+.digit {
+  @apply w-20 md:w-36 lg:w-40 mx-1 md:mx-4;
+
+  &__container {
+    @apply bg-blue w-full rounded-lg flex flex-col justify-center h-20 mx-1 md:h-36 lg:h-40;
+    position: relative;
+
+    &__number {
+      @apply flex justify-center font-redhat text-softred font-bold  text-4xl md:text-7xl;
+
+      &--top,
+      &--bottom {
+        @apply bg-blue;
+        backface-visiblity: hidden;
+        transform-style: preserve-3d;
+        transform: translateZ(0);
+      }
+
+      &--bottom {
+        top: 48%;
+        @apply bg-blue-soft bg-opacity-50 w-full h-1/2 overflow-hidden absolute left-0 md:top-1/2 pointer-events-none rounded-b-lg;
+        box-shadow: 0px 10px 0px #191a24;
+      }
+
+      &--bottom span {
+        @apply block;
+        margin-top: -0.5em;
+      }
+    }
+
+    &::before,
+    &::after {
+      @apply bg-blue-darkest z-10 absolute;
+      border-radius: 0 5px 5px 0;
+      content: "";
+      height: 10px;
+      top: 40%;
+      width: 5px;
+    }
+    &::after {
+      @apply right-0;
+      border-radius: 5px 0 0 5px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__container {
+      &::before,
+      &::after {
+        border-radius: 0 8px 8px 0;
+        width: 8px;
+        top: 45%;
+        height: 15px;
+      }
+
+      &::after {
+        border-radius: 8px 0 0 8px;
+      }
+    }
+  }
+
+  &__unit {
+    @apply flex justify-center font-redhat text-blue-light font-bold mt-5 text-xs tracking-wider md:tracking-huge  md:text-sm;
+  }
+}

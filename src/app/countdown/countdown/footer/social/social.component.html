@@ -1,0 +1,9 @@
+<div class="social">
+  <app-social-link
+    *ngFor="let social of socialNetworks"
+    class="social__link"
+    [icon]="social.icon"
+    [link]="social.link"
+    [name]="social.name"
+  ></app-social-link>
+</div>

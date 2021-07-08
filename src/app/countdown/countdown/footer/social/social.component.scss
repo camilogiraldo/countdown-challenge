@@ -1,0 +1,7 @@
+.social {
+  @apply flex mb-10 md:mb-0;
+
+  &__link {
+    @apply hover:text-softred mx-5;
+  }
+}

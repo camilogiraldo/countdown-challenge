@@ -1,0 +1,8 @@
+.countdown {
+  @apply h-screen flex bg-blue-dark flex-col justify-between items-center;
+  background-image: url("/assets/bg-stars.svg");
+
+  & > * {
+    @apply flex-grow;
+  }
+}

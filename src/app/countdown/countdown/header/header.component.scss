@@ -1,0 +1,7 @@
+.main-heading {
+  @apply flex flex-col justify-center h-full px-4;
+
+  & > h1 {
+    @apply font-redhat font-bold text-lg md:text-2xl lg:text-2xl text-white tracking-enormous text-center;
+  }
+}

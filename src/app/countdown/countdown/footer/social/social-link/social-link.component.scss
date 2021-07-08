@@ -1,0 +1,5 @@
+.link {
+  &__icon {
+    @apply text-blue-light text-3xl hover:text-softred;
+  }
+}
